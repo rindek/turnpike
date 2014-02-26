@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'redis', '~> 3.0'
   if RUBY_PLATFORM == "java"
-    s.add_runtime_dependency 'msgpack-jruby', '~> 1.4.0'
+    s.add_runtime_dependency 'msgpack-jruby'
   else
     s.add_runtime_dependency 'msgpack', '~> 0.5.4'
   end
