@@ -16,7 +16,11 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_runtime_dependency 'redis', '~> 3.0'
-  s.add_runtime_dependency 'msgpack', '~> 0.5.4'
+  if RUBY_PLATFORM == "java"
+    s.add_runtime_dependency 'msgpack-jruby', '~> 1.4.0'
+  else
+    s.add_runtime_dependency 'msgpack', '~> 0.5.4'
+  end
   s.add_development_dependency 'rake'
 
   s.required_ruby_version = '>= 2.0'
